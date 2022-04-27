@@ -1,0 +1,58 @@
+{
+    "name": "@d-gs/figma-plugin-starter-for-vue",
+    "version": "1.0.0",
+    "description": "Figma plugin starter.",
+    "type": "module",
+    "author": "__d",
+    "license": "MIT",
+    "keywords": [
+        "figma",
+        "plugin",
+        "vite"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/glamseam/figma-plugin-starter-for-vue.git"
+    },
+    "bugs": {
+        "url": "https://github.com/glamseam/figma-plugin-starter-for-vue/issues"
+    },
+    "scripts": {
+        "dev": "run-p dev:**",
+        "dev:code": "vite build --watch --mode development",
+        "dev:ui": "vite build --config vite.ui.config.ts --watch --mode development",
+        "prebuild": "rimraf dist && vue-tsc --noEmit",
+        "build:code": "vite build",
+        "build:ui": "vite build --config vite.ui.config.ts",
+        "build": "run-p build:**",
+        "postbuild": "rimraf dist/ui.js",
+        "lint": "eslint src -c .eslintrc.json --ext ts,vue",
+        "lintfix": "eslint --fix src -c .eslintrc.json --ext ts,vue",
+        "lint:css": "stylelint **/*.{sass,scss,vue}",
+        "lint:cssfix": "stylelint --fix **/*.{sass,scss,vue}"
+    },
+    "devDependencies": {
+        "@d-gs/eslint-config": "^0.1.12",
+        "@d-gs/eslint-config-for-vue": "^0.3.5",
+        "@d-gs/stylelint-config": "^0.5.0",
+        "@figma/plugin-typings": "^1.44.0",
+        "@vitejs/plugin-vue": "^2.3.1",
+        "@vitejs/plugin-vue-jsx": "^1.3.10",
+        "@vue/compiler-sfc": "^3.2.33",
+        "eslint": "^8.14.0",
+        "npm-run-all": "^4.1.5",
+        "rimraf": "^3.0.2",
+        "rollup-plugin-terser": "^7.0.2",
+        "sass": "^1.51.0",
+        "stylelint": "^14.8.0",
+        "stylelint-config-recommended": "^7.0.0",
+        "stylelint-config-recommended-scss": "^6.0.0",
+        "stylelint-config-recommended-vue": "^1.4.0",
+        "stylelint-scss": "^4.2.0",
+        "typescript": "^4.6.3",
+        "vite": "^2.9.6",
+        "vite-plugin-singlefile": "^0.9.0",
+        "vue": "^3.2.33",
+        "vue-tsc": "^0.34.10"
+    }
+}

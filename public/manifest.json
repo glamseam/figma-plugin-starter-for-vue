@@ -1,0 +1,10 @@
+{
+    "name": "Figma Plugin Starter for Vue",
+    "id": "1111111111111111111",
+    "api": "1.0.0",
+    "main": "code.js",
+    "ui": "ui.html",
+    "editorType": [
+        "figma"
+    ]
+}
